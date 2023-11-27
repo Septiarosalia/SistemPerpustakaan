@@ -1,0 +1,65 @@
+import java.util.Date;
+
+public class TransaksiPeminjaman {
+    private Date tanggal;
+    private Date waktu;
+    private int durasi;
+    private AnggotaPerpustakaan anggota;
+    private Buku buku;
+
+    public void setTanggal(Date tanggal) {
+        this.tanggal = tanggal;
+    }
+
+    public void setDurasi(int durasi) {
+        this.durasi = durasi;
+    }
+
+    public void setBuku(Buku buku) {
+        this.buku = buku;
+    }
+
+    public Date getWaktu() {
+        return waktu;
+    }
+
+    public void setWaktu(Date waktu) {
+        this.waktu = waktu;
+    }
+
+    public AnggotaPerpustakaan getAnggota() {
+        return anggota;
+    }
+
+    public void setAnggota(AnggotaPerpustakaan anggota) {
+        this.anggota = anggota;
+    }
+
+    public TransaksiPeminjaman(Date tanggal, Date waktu, int durasi, AnggotaPerpustakaan anggota, Buku buku) {
+        this(tanggal, durasi, anggota, buku);
+    }
+
+    public TransaksiPeminjaman(Date tanggal, int durasi, AnggotaPerpustakaan anggota, Buku buku) {
+        this.tanggal = tanggal;
+        this.waktu = waktu;
+        this.durasi = durasi;
+        this.anggota = anggota;
+        this.buku = buku;
+    }
+
+    public void catatPeminjaman() {
+        System.out.println("Peminjaman buku " + buku.getJudul() + " oleh " + anggota.nama + " berhasil dicatat.");
+    }
+
+    public int getDurasi() {
+        return durasi;
+    }
+
+    public Buku getBuku() {
+        return buku;
+    }
+
+    public Date getTanggal() {
+        return tanggal;
+    }
+}
