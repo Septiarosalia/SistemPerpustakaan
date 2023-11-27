@@ -1,0 +1,55 @@
+import java.util.Date;
+
+public class TransaksiPengembalian {
+    private Date tanggal;
+    private Date waktu;
+    private Buku buku;
+    private AnggotaPerpustakaan anggota;
+
+    public Date getTanggal() {
+        return tanggal;
+    }
+
+    public void setTanggal(Date tanggal) {
+        this.tanggal = tanggal;
+    }
+
+    public Date getWaktu() {
+        return waktu;
+    }
+
+    public void setWaktu(Date waktu) {
+        this.waktu = waktu;
+    }
+
+    public Buku getBuku() {
+        return buku;
+    }
+
+    public void setBuku(Buku buku) {
+        this.buku = buku;
+    }
+
+    public AnggotaPerpustakaan getAnggota() {
+        return anggota;
+    }
+
+    public void setAnggota(AnggotaPerpustakaan anggota) {
+        this.anggota = anggota;
+    }
+
+    public TransaksiPengembalian(Date tanggal, Date waktu, Buku buku, AnggotaPerpustakaan anggota) {
+        this(tanggal, buku, anggota);
+    }
+
+    public TransaksiPengembalian(Date tanggal, Buku buku, AnggotaPerpustakaan anggota) {
+        this.tanggal = tanggal;
+        this.waktu = waktu;
+        this.buku = buku;
+        this.anggota = anggota;
+    }
+
+    public void catatPengembalian() {
+        System.out.println("Pengembalian buku " + buku.getJudul() + " oleh " + anggota.nama + " berhasil dicatat.");
+    }
+}
