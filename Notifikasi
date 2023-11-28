@@ -1,10 +1,5 @@
 import java.util.Date;
 
-/**
- *
- * @author lenovo
- */
-
 public class Notifikasi {
     private Date batasWaktu;
     private String infoTerbaru;
@@ -22,7 +17,6 @@ public class Notifikasi {
     }
 
     public void kirimNotifikasi(String pesan) {
-        // Simulasi pengiriman notifikasi, misalnya ke email atau pesan singkat
         System.out.println("Notifikasi: " + pesan);
     }
 
