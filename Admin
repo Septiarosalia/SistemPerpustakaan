@@ -1,0 +1,37 @@
+public class Admin {
+    private Laporan laporan;
+
+    public Laporan getLaporan() {
+        return laporan;
+    }
+
+    public void setLaporan(Laporan laporan) {
+        this.laporan = laporan;
+    }
+
+    public void kelolaAnggota(AnggotaPerpustakaan anggota, String tindakan) {
+        if (tindakan.equalsIgnoreCase("tambah")) {
+            System.out.println("Anggota baru berhasil ditambahkan.");
+        } else if (tindakan.equalsIgnoreCase("hapus")) {
+            System.out.println("Anggota berhasil dihapus.");
+        } else {
+            System.out.println("Tindakan tidak valid.");
+        }
+    }
+
+    public void kelolaBuku(Buku buku, String tindakan) {
+        if (tindakan.equalsIgnoreCase("tambah")) {
+            System.out.println("Buku baru berhasil ditambahkan.");
+        } else if (tindakan.equalsIgnoreCase("hapus")) {
+            System.out.println("Buku berhasil dihapus.");
+        } else {
+            System.out.println("Tindakan tidak valid.");
+        }
+    }
+
+    public void buatLaporan(List<TransaksiPeminjaman> transaksiPeminjaman) {
+        for (TransaksiPeminjaman transaksi : transaksiPeminjaman) {
+            System.out.println("Laporan transaksi peminjaman: " + transaksi.getTanggal());
+        }
+    }
+}
