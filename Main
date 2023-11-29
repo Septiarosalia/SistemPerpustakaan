@@ -1,0 +1,105 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+//        Buku buku1 = new Buku("Mariposa", "Luluk HF", "123498765");
+//        Buku buku2 = new Buku("Dilan 1991", "Pidi Baiq", "9786027870994");
+//
+//        AnggotaPerpustakaan anggota1 = new AnggotaPerpustakaan("Afina Zahra Choirunnisa", "221AZC", "Jl. Bunga Sedap Malam, Way Kandis, Bandar Lampung");
+//
+//        buku1.informasiBuku();
+//        System.out.println();
+//        buku2.informasiBuku();
+//        System.out.println();
+//
+//        anggota1.pinjamBuku(buku1, 4);
+//        System.out.println();
+//        anggota1.pinjamBuku(buku2, 11);
+//
+//        System.out.println();
+//
+//        buku1.informasiBuku();
+//        System.out.println();
+//        buku2.informasiBuku();
+//        
+//        System.out.println();
+//        
+//        anggota1.lihatRiwayatPeminjaman();
+//        System.out.println();
+//        
+//        anggota1.kembalikanBuku(buku1);
+//        System.out.println();
+//        anggota1.kembalikanBuku(buku2);
+//        
+//        System.out.println();
+//        buku1.informasiBuku();
+//        System.out.println();
+//        buku2.informasiBuku();
+//    }
+//}
+
+//program dengan menggunakan inputan
+        Scanner input = new Scanner(System.in);
+        
+        Buku buku1 = new Buku("Mariposa", "Luluk HF", "123498765");
+        Buku buku2 = new Buku("Dilan 1991", "Pidi Baiq", "9786027870994");
+        
+        System.out.print("Masukkan informasi anggota perpustakaan");
+        System.out.println();
+        System.out.print("Nama\t\t: ");
+        String namaAnggota = input.nextLine();
+        System.out.print("Nomor Anggota\t: ");
+        String nomorAnggota = input.nextLine();
+        System.out.print("Alamat\t\t: ");
+        String alamatAnggota = input.nextLine();
+        System.out.println();
+
+        AnggotaPerpustakaan anggota1 = new AnggotaPerpustakaan(namaAnggota, nomorAnggota, alamatAnggota);
+
+        buku1.informasiBuku();
+        System.out.println();
+        buku2.informasiBuku();
+        System.out.println();
+
+        System.out.println("Peminjaman buku");
+        System.out.print("Masukkan buku yang akan dipinjam : ");
+        int nomorBuku = input.nextInt();
+        System.out.print("Masukkan jumlah hari peminjaman : ");
+        int hariPinjam = input.nextInt();
+
+        if (nomorBuku == 1) {
+            anggota1.pinjamBuku(buku1, hariPinjam);
+        } else if (nomorBuku == 2) {
+            anggota1.pinjamBuku(buku2, hariPinjam);
+        } else {
+            System.out.println("Nomor buku tidak valid.");
+        }
+
+        System.out.println();
+        buku1.informasiBuku();
+        System.out.println();
+        buku2.informasiBuku();
+
+        System.out.println();
+        anggota1.lihatRiwayatPeminjaman();
+        System.out.println();
+
+        System.out.print("Masukkan nomor buku yang akan dikembalikan : ");
+        int nomorBukuKembali = input.nextInt();
+
+        if (nomorBukuKembali == 1) {
+            anggota1.kembalikanBuku(buku1);
+        } else if (nomorBukuKembali == 2) {
+            anggota1.kembalikanBuku(buku2);
+        } else {
+            System.out.println("Nomor buku tidak valid.");
+        }
+
+        System.out.println();
+        buku1.informasiBuku();
+        System.out.println();
+        buku2.informasiBuku();
+
+        input.close();
+    }
+}
