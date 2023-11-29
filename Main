@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-//    Buku buku1 = new Buku("Mariposa", "Luluk HF", "123498765");
+//        Buku buku1 = new Buku("Mariposa", "Luluk HF", "123498765");
 //        Buku buku2 = new Buku("Dilan 1991", "Pidi Baiq", "9786027870994");
 //
 //        AnggotaPerpustakaan anggota1 = new AnggotaPerpustakaan("Afina Zahra Choirunnisa", "221AZC", "Jl. Bunga Sedap Malam, Way Kandis, Bandar Lampung");
