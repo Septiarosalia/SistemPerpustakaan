@@ -38,7 +38,7 @@ public class main {
 //    }
 //}
 
-//dengan inputan
+//program dengan menggunakan inputan
         Scanner input = new Scanner(System.in);
         
         Buku buku1 = new Buku("Mariposa", "Luluk HF", "123498765");
