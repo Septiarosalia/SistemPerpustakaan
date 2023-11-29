@@ -36,11 +36,11 @@ public class Buku {
     }
 
     public void informasiBuku() {
-        System.out.println("Informasi Buku:");
-        System.out.println("Judul: " + judul);
-        System.out.println("Pengarang: " + pengarang);
-        System.out.println("Nomor ISBN: " + nomorISBN);
-        System.out.println("Ketersediaan: " + (statusKetersediaan ? "Tersedia" : "Tidak Tersedia"));
+        System.out.println("Informasi Buku");
+        System.out.println("Judul\t\t: " + judul);
+        System.out.println("Pengarang\t: " + pengarang);
+        System.out.println("Nomor ISBN\t: " + nomorISBN);
+        System.out.println("Ketersediaan\t: " + (statusKetersediaan ? "Tersedia" : "Tidak Tersedia"));
     }
 
     public boolean cekKetersediaan() {
