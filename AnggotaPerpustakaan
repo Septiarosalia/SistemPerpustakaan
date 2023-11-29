@@ -68,11 +68,11 @@ public class AnggotaPerpustakaan {
     }
 
     public void lihatRiwayatPeminjaman() {
-        System.out.println("Riwayat Peminjaman:");
+        System.out.println("Riwayat Peminjaman");
         for (TransaksiPeminjaman transaksi : riwayatPeminjaman) {
-            System.out.println("Tanggal Peminjaman: " + transaksi.getTanggal());
-            System.out.println("Durasi Peminjaman: " + transaksi.getDurasi() + " hari");
-            System.out.println("Buku: " + transaksi.getBuku().getJudul());
+            System.out.println("Tanggal Peminjaman\t: " + transaksi.getTanggal());
+            System.out.println("Durasi Peminjaman\t: " + transaksi.getDurasi() + " hari");
+            System.out.println("Buku\t\t\t: " + transaksi.getBuku().getJudul());
         }
     }
 }
